@@ -1,5 +1,3 @@
-// DishCard/index.js
-import React from "react";
 import "./index.css";
 
 const DishCard = ({ dish, quantity, onQuantityChange }) => {

@@ -1,5 +1,3 @@
-// Navbar/index.js
-import React from "react";
 import ShoppingCartOutlinedIcon from "@mui/icons-material/ShoppingCartOutlined";
 import "./index.css";
 

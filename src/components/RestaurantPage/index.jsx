@@ -1,5 +1,4 @@
-// RestaurantPage/index.js
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Tabs from "../Tabs";
 import DishCard from "../DishCard";
 import Navbar from "../Navbar";

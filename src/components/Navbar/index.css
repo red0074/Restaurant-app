@@ -1,0 +1,54 @@
+.navbar {
+  background: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  height: 60px;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 16px;
+}
+
+.restaurant-name {
+  font-weight: 600;
+  font-size: 18px;
+}
+.cart-view {
+  display: flex;
+  gap: 10px;
+}
+.mobile {
+  display: none;
+}
+.web {
+  display: flex;
+}
+.cart {
+  position: relative;
+  font-size: 20px;
+}
+
+.cart-count {
+  position: absolute;
+  top: -6px;
+  right: -10px;
+  background: #ff4d4d;
+  color: white;
+  border-radius: 50%;
+  font-size: 12px;
+  padding: 2px 6px;
+}
+
+@media screen and (width<768px) {
+  .mobile {
+    display: block;
+  }
+  .web {
+    display: none;
+  }
+}

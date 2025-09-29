@@ -1,0 +1,33 @@
+.tabs {
+  display: flex;
+  gap: 12px;
+  overflow-x: auto;
+  padding: 10px;
+  background: #fafafa;
+  scrollbar-width: none;
+}
+
+.tabs::-webkit-scrollbar {
+  display: none;
+}
+
+.tab-btn {
+  background: none;
+  border: 1px solid #ddd;
+  font-size: 15px;
+  padding: 6px 14px;
+  cursor: pointer;
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+  white-space: nowrap;
+}
+
+.tab-btn:hover {
+  background: #f0f0f0;
+}
+
+.tab-btn.active {
+  background: #000;
+  color: #fff;
+  border-color: #000;
+}

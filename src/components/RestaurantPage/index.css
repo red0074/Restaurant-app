@@ -1,0 +1,12 @@
+.restaurant-page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #f8f8f8;
+}
+
+.dish-list {
+  padding: 10px 16px;
+  display: flex;
+  flex-direction: column;
+}

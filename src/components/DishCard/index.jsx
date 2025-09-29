@@ -1,20 +1,15 @@
-import React, { useState } from "react";
+// DishCard/index.js
+import React from "react";
 import "./index.css";
 
-const DishCard = ({ dish, onQuantityChange }) => {
-  const [quantity, setQuantity] = useState(0);
-
+const DishCard = ({ dish, quantity, onQuantityChange }) => {
   const increase = () => {
-    const newQty = quantity + 1;
-    setQuantity(newQty);
-    onQuantityChange(dish, newQty);
+    onQuantityChange(dish.dish_id, quantity + 1);
   };
 
   const decrease = () => {
     if (quantity > 0) {
-      const newQty = quantity - 1;
-      setQuantity(newQty);
-      onQuantityChange(dish, newQty);
+      onQuantityChange(dish.dish_id, quantity - 1);
     }
   };
 
@@ -28,7 +23,9 @@ const DishCard = ({ dish, onQuantityChange }) => {
         ></div>
         <div className="dish-details">
           <h3 className="dish-name">{dish.dish_name}</h3>
-          <p className="dish-price">SAR {dish.dish_price}</p>
+          <p className="dish-price">
+            {dish.dish_currency} {dish.dish_price}
+          </p>
           <p className="dish-desc">{dish.dish_description}</p>
           <p className="dish-calories">{dish.dish_calories} calories</p>
 
@@ -36,14 +33,16 @@ const DishCard = ({ dish, onQuantityChange }) => {
             <p className="customization">Customizations available</p>
           )}
 
-          {dish.dish_Availability ? (
+          {!dish.dish_Availability && (
+            <p className="not-available">Not available</p>
+          )}
+
+          {dish.dish_Availability && (
             <div className="quantity-control">
               <button onClick={decrease}>-</button>
               <span>{quantity}</span>
               <button onClick={increase}>+</button>
             </div>
-          ) : (
-            <p className="not-available">Not available</p>
           )}
         </div>
       </div>
